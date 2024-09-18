@@ -1,0 +1,14 @@
+# THIS CODE WAS ACCEPTED
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        numValues= {}
+        for i, num in enumerate(nums):
+            number = target - num
+            if number in numValues:
+                return [numValues[number], i]
+            numValues[num] = i
